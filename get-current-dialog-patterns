@@ -1,0 +1,16 @@
+//get the current patterns in a CB bot interaction with patterns
+
+function getCurrentChipWords() {
+  const existingChipElements = document.querySelectorAll('.bc-editable-chips-chip-label');
+  const wordsArray = [];
+
+  existingChipElements.forEach(element => {
+    wordsArray.push(element.textContent.trim());
+  });
+
+  return wordsArray;
+}
+
+// To use it, simply call the function in your DevTools console:
+var currentWords2 = getCurrentChipWords();
+console.log(currentWords2);
